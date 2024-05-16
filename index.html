@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XandY AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<style>
+    /* CSS styles for white text */
+    .white-text {
+        color: white;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#">
+                <img src="logo1.png" alt="XandY AI Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#problem">The Problem</a></li>
+                    <li><a href="#solution">Our Solution</a></li>
+                    <li><a href="#features"><strong>Features</strong></a></li> <!-- Bold "Features" -->
+                    <li><a href="#onboarding">Onboarding</a></li>
+                    <li><a href="#business-model">Business Model</a></li>
+                    <li><a href="#strategy">Strategy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="problem" class="section">
+        <div class="container">
+            <h2 class="section-title">The Problem</h2>
+            <p>Many students struggle with traditional study methods. Exam preparation is stressful and lacks personalisation. Existing tools don't adapt to individual student needs.</p>
+        </div>
+    </section>
+    <section id="solution" class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Our Solution</h2>
+                <p class="white-text">XandY AI offers personalized study plans. Our app reduces distraction and enhances motivation. Students receive tailored guidance for effective studying.</p>
+            </div>
+            <img src="solution.png" alt="Solution" class="section-image" />
+        </div>
+    </section>
+    <!-- Add this HTML code for the "Product Features" section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Product <strong>Features</strong></h2> <!-- Bold "Features" -->
+                <ul>
+                    <li><strong>AI Study Plan Recommendation</strong></li> <!-- Bold each feature -->
+                    <li><strong>Schedule Maker</strong></li>
+                    <li><strong>App Timer and Blocker</strong></li>
+                    <li><strong>AI Mentor Bot</strong></li>
+                    <li><strong>Sleep & Stress Monitors</strong></li>
+                    <li><strong>Analysis and Reports</strong></li>
+                </ul>
+            </div>
+            <img src="features.png" alt="Features" class="section-image" />
+        </div>
+    </section>
+
+    <section id="onboarding" class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Easy Onboarding</h2>
+                <p class="white-text">Input your data effortlessly through our user-friendly chatbot. Choose between chatting or using voice input for a personalized setup.</p>
+            </div>
+            <img src="onboarding.png" alt="Onboarding" class="section-image" />
+        </div>
+    </section>
+    <section id="business-model" class="section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Business Model</h2>
+                <p>Freemium Subscription and API Integration fees from educational institutes.</p>
+            </div>
+            <img src="business-model.png" alt="Business Model" class="section-image" />
+        </div>
+    </section>
+    <section id="strategy" class="section">
+        <div class="container">
+            <h2 class="section-title">Go-to-market Strategy</h2>
+            <p class="white-text">Minimum viable product Refine platform – Integrate AI Expansion (2024-2028).</p>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form id="contact-form" action="https://formspree.io/f/mqkrjnkn" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <div id="form-messages"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 XandY AI. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
