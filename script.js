@@ -64,11 +64,33 @@ form.addEventListener('submit', e => {
     isValid = false;
   }
 
-  // Display success message and submit form if valid
+  // Submit the form via AJAX if valid
   if (isValid) {
-    displayFormMessage('Thank you for your message!', 'success');
-    // Simulate form submission for demonstration
-    setTimeout(() => form.reset(), 1000);
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        displayFormMessage('Thank you for your message!', 'success');
+        form.reset();
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            data.errors.forEach(error => {
+              displayFormMessage(error.message, 'error');
+            });
+          } else {
+            displayFormMessage('Oops! There was a problem submitting your form', 'error');
+          }
+        });
+      }
+    }).catch(() => {
+      displayFormMessage('Oops! There was a problem submitting your form', 'error');
+    });
   }
 });
 
